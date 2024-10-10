@@ -1,0 +1,129 @@
+/* Контейнеры и блоки (структура) */
+.news-list { 
+    /* Размеры и позиционирование */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    /* Оформление */
+    background-color: #121212;
+}
+
+.news-item {
+    /* Размеры и позиционирование */
+    display: flex;
+    width: 100%;
+    max-height: 512px;
+
+    /* Отступы */
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+    /* Оформление */
+    border-bottom: 1px solid #404040;
+    overflow: hidden;
+    box-sizing: border-box; /* Чтобы отступы и границы не влияли на размеры */
+}
+
+.news-item:last-child {
+    /* Оформление */
+    border-bottom: none;
+}
+
+.news-category {
+    /* Размеры и позиционирование */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+    width: 100%;
+}
+
+.news-content {
+    /* Размеры и позиционирование */
+    width: 100%;
+    text-align: left;
+
+    /* Отступы */
+    /* margin-right: 64px; */
+
+    /* Оформление */
+    box-sizing: border-box;
+}
+
+/* Текстовые элементы и оформление контента */
+.news-title {
+    /* Шрифты и текст */
+    font-family: "Fifaks 1.0 dev1";
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 100%;
+    color: #FEFEFE;
+
+    /* Отступы */
+    padding-bottom: 8px;
+
+    /* Размеры и позиционирование */
+    max-width: 576px;
+    max-height: 76px;
+    box-sizing: border-box;
+}
+
+.news-description {
+    /* Шрифты и текст */
+    font-size: 20px;
+    line-height: 110%;
+    color: #707070;
+
+    /* Отступы */
+    padding-top: 8px;
+    padding-bottom: 90px;
+
+    /* Размеры и позиционирование */
+    max-width: 576px;
+    max-height: 66px;
+    box-sizing: border-box;
+}
+
+.news-date {
+    /* Шрифты и текст */
+    font-size: 16px;
+    color: #FEFEFE;
+
+    /* Отступы */
+    padding-top: 160px;
+}
+
+.first-category {
+    /* Шрифты и текст */
+    font-family: Rubik;
+    color: #34d3d7;
+}
+
+/* Изображения и медиаконтент */
+.news-image {
+    /* Размеры и позиционирование */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-left: 64px;
+    /* Оформление */
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.news-image image {
+    /* Размеры и позиционирование */
+    width: 100%;
+    height: 100%;
+    max-width: 586px;
+    max-height: 332px;
+
+    /* Оформление */
+    border-radius: 8px;
+}
+
+.first-image {
+    /* Оформление */
+    border: 1px solid #34d3d7;
+}
