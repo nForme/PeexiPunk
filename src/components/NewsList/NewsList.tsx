@@ -11,7 +11,7 @@ const newsData = [
     description:
       "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
     date: "14 April 2024",
-    imageUrl: "https://via.placeholder.com/440x250", 
+    imageUrl: "https://via.placeholder.com/586x332", 
   },
 
   {
