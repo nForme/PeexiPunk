@@ -3,6 +3,8 @@ import "./NewsList.css";
 import LeftBracket from "../Brackets/LeftBracket";
 import RightBracket from "../Brackets/RightBracket";
 
+import Photo from "./PhotoTopNews.png"
+
 const newsData = [
   {
     id: 1,
@@ -11,7 +13,7 @@ const newsData = [
     description:
       "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
     date: "14 April 2024",
-    imageUrl: "https://via.placeholder.com/586x332", 
+    imageUrl: Photo, 
   },
 
   {
@@ -21,7 +23,7 @@ const newsData = [
     description:
       "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
     date: "14 April 2024",
-    imageUrl: "https://via.placeholder.com/440x250",
+    imageUrl: Photo,
   },
 
   {
@@ -31,7 +33,7 @@ const newsData = [
     description:
       "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
     date: "14 April 2024",
-    imageUrl: "https://via.placeholder.com/440x250", 
+    imageUrl: Photo,
   },
 
   {
@@ -41,7 +43,7 @@ const newsData = [
     description:
       "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
     date: "14 April 2024",
-    imageUrl: "https://via.placeholder.com/440x250",
+    imageUrl: Photo,
   },
 
   {
@@ -51,7 +53,7 @@ const newsData = [
     description:
       "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
     date: "14 April 2024",
-    imageUrl: "https://via.placeholder.com/440x250", 
+    imageUrl: Photo, 
   },
   {
     id: 6,
@@ -60,7 +62,7 @@ const newsData = [
     description:
       "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
     date: "14 April 2024",
-    imageUrl: "https://via.placeholder.com/440x250",
+    imageUrl: Photo,
   },
 
 ];

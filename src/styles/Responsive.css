@@ -1,7 +1,6 @@
-
 @media (min-width: 1440px){
     .main-container {
-        max-width: 1360px;
+        /* max-width: 1360px; */
         margin: 0 40px;
     }
 
@@ -46,7 +45,7 @@
     }
 
     .news-image{
-        max-width: 450px;
+        /* max-width: 450px; */
     }
 
     .news-title{
@@ -84,6 +83,7 @@
     .top-news-title{
         max-height: 66px;
         width: 492px;
+        padding-top: 8px;
     }
 
     .top-news-description{
@@ -123,11 +123,11 @@
     }
 
     .news-content{
-        max-width: 613px;
+        max-width: 643px;
     }
 
     .news-image{
-        max-width: 613px;
+        max-width: 583px;
     }
 
     .news-title{

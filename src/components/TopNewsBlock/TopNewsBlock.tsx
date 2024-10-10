@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import LeftBracket from "../Brackets/LeftBracket";
 import RightBracket from "../Brackets/RightBracket";
-// import Photo from './PhotoTopNews.png'
+import Photo from './PhotoTopNews.png'
 import './TopNewsBlock.css'
 
 
@@ -17,9 +17,9 @@ const TopNewsBlock: React.FC = () =>{
     ];
 
     const slides = [
-        "https://via.placeholder.com/1226x696",
-        "https://via.placeholder.com/1226x696",
-        "https://via.placeholder.com/1226x696"
+        Photo,
+        Photo,
+        Photo
     ];
 
     const [currentSlide, setCurrentSlide] = useState(0);
