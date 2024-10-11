@@ -1,0 +1,49 @@
+.dropdown-block{
+    align-self: end;
+}
+
+.dropdown-menu{
+    max-width: 180px;
+    max-height: 162px;
+
+    background-color: #121212;
+    border-radius: 6px;
+    border: 1.4px solid #404040;
+
+    &.active{
+        background-color: #FEFEFE;
+    }
+}
+
+.dropdown-menu{
+    margin: 0;
+    padding: 15px 20px;
+    list-style-type: none;
+    box-sizing: border-box;
+
+    .dropdown-item{
+        margin-top: 8px;
+        font-weight: 500;
+        color: #707070;
+
+        &.active{
+            color: #FEFEFE;
+        }
+    }
+
+    .dropdown-toggle{
+
+    
+        .filter-label{
+            color: #707070;
+        }
+    
+        svg{
+            width: 16px;
+            height: 10px;
+            margin-left: 10px;
+        }
+    }
+}
+
+

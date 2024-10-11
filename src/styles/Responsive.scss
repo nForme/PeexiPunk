@@ -1,195 +1,89 @@
-$base-width1920: 1840px;
-$base-width1440: 1360px;
-$base-width: $base-width1920;
-$base-font-size: 16px;
 
-@function font-rem($size-in-px) {
-    @return ($size-in-px / $base-font-size) * 1rem;
+@function adaptive-margin($min, $max) {
+    
+    $min-width: 1440px;
+    $max-width: 1920px;
+    $min-w: 1440;
+    $max-w: 1920;
+     
+     
+    @return calc(#{$min}px + (#{($max - $min)} * ((100vw - #{$min-width}) / (#{$max-w} - #{$min-w}))));
 }
 
+@function adaptive-height($min-height, $max-height) {
+    $min-width: 1440px;
+    $max-width: 1920px;
+    $min-w: 1440;
+    $max-w: 1920;
+
+    @return calc(#{$min-height}px + (#{($max-height - $min-height)} * ((100vw - #{$min-width}) / (#{$max-w} - #{$min-w}))));
+}
+
+
 @media (min-width:1440px) {
-    $base-width: $base-width1440;
     // TopNewsBlock
 
     .TopNewsBlock{
-        min-width: 1360px;
-        max-width: 1840px;
+        height: adaptive-height(512, 696 );
+
+        .left-news{
+            flex: 1;
+            max-width: adaptive-margin(460, 614);
+
+            .top-news-category{
+                font-size: 16px;
+            }
+
+            .top-news-title{
+                font-size: 28px;
+            }
+
+            .top-news-description{
+                font-size: 18px;
+            }
+        }
+
+        .right-news{
+            flex: 1;
+            max-width: 1226px
+        }
     }
-
-    .left-news{
-        min-width: 460px; 
-        // max-width: 614px;
-
-    }
-    
-    .right-news{
-        min-width: 900px;
-        max-width: 1226px;
-
-        min-height: 512px;
-        max-height: 696px;
-    }
-
-    .top-news-title{
-        font-size: 28px;
-
-    }
-
-    .top-news-description{
-        font-size: 18px;
-    }
-
-    .top-news-date{
-        font-size: 16px;
-    }
-     
-    // NewsList
 
     .news-list{
-        min-width: 1360px;
-        max-width: 1840px;
+        .news-item{
+            padding: 30px 0;
+        }
+    
+        .news-category{
+            flex: 1;
+            max-width: adaptive-margin(460, 614);
+        }
+    
+        .news-content{
+            flex: 1;
+            max-width: 613px;
 
-        margin-top: 100px;
-    }
+            .news-title{
+                font-size: 28px;
+            }
 
-    .news-item{
-        padding-bottom: 30px;
-        padding-top: 30px;
-    }
+            .news-description{
+                font-size: 18px;
+            }
+        }
+    
+        .news-image{
+            flex: 1;
+            max-width: 613px;
+            margin-left: 40px ;
+        }
 
-    .news-category{
-        width: 100%;
-        min-width: 460px;
-        // max-width: 613px;
-
-    }
-
-    .news-content
-    {
-        width: 100%;
-        min-width: 450px;
-        max-width: 612px;
-
-        padding-right: 40px;
-    }
-
-    .news-image{
-        width: 100%;
-        
-        max-width: 612px;
-    }
-
-    .news-category{
-        font-size: 16px;
-    }
-
-    .news-title{
-        // max-width: 420px;
-        max-width: 420px;
-
-        padding-bottom: 8px;
-
-        font-size: 28px;
-
-    }
-
-    .news-description{
-        // max-width: 400px;
-        max-width: 400px;
-
-        font-size: 18px;
-    }
-
-    .news-date{
-        font-size: 16px;
-    }
-
-    //
-    .main-container{
-        margin: 0 40px;
+        .dropdown-block {
+            margin-top: 100px;
+        }
     }
 }
 
 @media (min-width:1920px) {
-    // topNewsBlock
-    .TopNewsBlock{
-        min-width: 1840px;
-        max-width: 1840px;
-    }
-
-    .left-news{
-        min-width:  614px;
-    }
-
-    .right-news{
-        min-width: 1226px;
-
-        min-height: 696px;
-        // max-height: 696px;
-    }
-
-    .top-news-title{
-        font-size: 38px;
-
-    }
-
-    .top-news-description{
-        font-size: 20px;
-    }
-
-    .top-news-date{
-        font-size: 20px;
-    }
-     
-    // NewsList
-    .news-list{
-        // min-width: 1360px;
-        // max-width: 1840px;
-        min-width: 1840px;
-        margin-top: 140px;
-    }
-   
-    .news-item{
-        padding-bottom: 40px;
-        padding-top: 40px;
-    }
-
-    .news-category{
-        // width: 100%;
-        // max-width: 613px;
-        min-width: 614px;
-        font-size: 20px;
-    }
-
-    .news-content
-    {
-        // width: 100%;
-        min-width: 612px;
-
-        padding-right: 64px;
-    }
-
-    .news-image{
-        // width: 100%;
-        max-width: 612px;
-    }
-
-
-    .news-title{
-        max-width: 576px;
-
-        padding-bottom: 8px;
-
-        font-size: 38px;
-
-    }
-
-    .news-description{
-        max-width: 576px;
-        font-size: 20px;
-    }
-
-    .news-date{
-        font-size: 20px;
-    }
+    
 }

@@ -2,6 +2,7 @@ import Photo from "./PhotoTopNews.png"
 import React from "react";
 import "./newsList.scss"
 
+import Filter from "../Filter/Filter";
 import LeftBracket from "../Brackets/LeftBracket";
 import RightBracket from "../Brackets/RightBracket";
 
@@ -71,7 +72,7 @@ const NewsList: React.FC = () => {
 return (
     
     <div className="news-list">
-        <button className="filter"/>
+        <Filter/>
     {newsData.map((news, index) => (
         <div key={news.id} className="news-item">
         <div className="news-category">
