@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import LeftBracket from "../Brackets/LeftBracket";
 import RightBracket from "../Brackets/RightBracket";
 import Photo from './PhotoTopNews.png'
-import './TopNewsBlock.css'
+import './TopNewsBlock.scss'
 
 
 const TopNewsBlock: React.FC = () =>{

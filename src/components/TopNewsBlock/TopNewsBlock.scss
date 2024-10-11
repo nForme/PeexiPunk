@@ -6,7 +6,7 @@
 }
 
 .left-news{
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: left;
     flex-direction: column;
@@ -45,6 +45,7 @@
     line-height: 100%;
     /* font-size: 28px; */
     font-family: "Fifaks 1.0 dev1";
+    /* src: url(/src/styles/font/Fifaks10Dev1.ttf); */
     font-weight: 400;
 }
  
@@ -53,6 +54,10 @@
     padding-top: 8px;
     line-height: 110%;
     color: #707070;
+}
+
+.top-news-date{
+    margin-top: auto;
 }
 
 .slider-container {
