@@ -45,7 +45,7 @@
 
         .right-news{
             flex: 1;
-            max-width: 1226px
+            // max-width: 1226px
         }
     }
 
@@ -56,12 +56,13 @@
     
         .news-category{
             flex: 1;
-            max-width: adaptive-margin(460, 614);
+            min-width: adaptive-margin(460, 614);
         }
     
         .news-content{
-            flex: 1;
-            max-width: 613px;
+            // flex: 1;
+            max-width: 613px;            
+            // max-width: adaptive-margin(460, 613);
 
             .news-title{
                 font-size: 28px;
@@ -73,9 +74,11 @@
         }
     
         .news-image{
-            flex: 1;
+            // max-width: adaptive-margin(460, 613);
+
+            // flex: 1;
             max-width: 613px;
-            margin-left: 40px ;
+            margin-left: 40px;
         }
 
         .dropdown-block {
