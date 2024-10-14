@@ -5,4 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: "/PeexiPunk",
   plugins: [react()],
+  //поможет в навигации
+  css: {
+    devSourcemap:true
+  },
+   
 })

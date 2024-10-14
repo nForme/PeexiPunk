@@ -21,51 +21,46 @@ const TopNewsBlock: React.FC = () =>{
         Photo,
         Photo
     ];
-
     const [currentSlide, setCurrentSlide] = useState(0);
     const [progress, setProgress] = useState(0);
 
-    const slideDuration = 3000; 
-
-
-    const nextSlide = () => {
-        setCurrentSlide((prevSlide) =>
-            prevSlide === slides.length - 1 ? 0 : prevSlide + 1
-        );
-        setProgress(0); 
-    };
-
- 
     useEffect(() => {
-        const progressInterval = setInterval(() => {
-            setProgress((prevProgress) => {
-                if (prevProgress >= 100) {
-                    nextSlide(); 
-                    return 0;
-                }
-                return prevProgress + (100 / (slideDuration / 100)); 
-            });
-        }, 100); 
+        const slideDuration = 5000; // 
+        const interval = setInterval(() => {
+        setProgress((prev) => {
+            if (prev < 100) return prev + 1; 
+            return 0; 
+        });
+        }, slideDuration / 100); 
 
-        return () => clearInterval(progressInterval); 
-    }, [currentSlide]);
+        
+        if (progress === 100) {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+        }
+
+        return () => clearInterval(interval); 
+    }, [progress, slides.length]);
 
     return (
-        <div className="TopNewsBlock">
+        <div className="top-news-block">
             <div className="left-news">
-                <div className="category">
-                    <LeftBracket/>
-                        <span className="top-news-category">{data[0].category}</span>
-                    <RightBracket/>
+                <div className="top-news-content">
+                    <div className="category">
+                        <LeftBracket/>
+                            <span className="top-news-category">{data[0].category}</span>
+                        <RightBracket/>
+                    </div>
+                    <h2 className='top-news-title'>{data[0].title}</h2>
+                    <p className='top-news-description'>{data[0].description}</p>
                 </div>
-                <h2 className='top-news-title'>{data[0].title}</h2>
-                <p className='top-news-description'>{data[0].description}</p>
-                <p className='top-news-date'>{data[0].date}</p>
+                    <div className="top-news-date-container">
+                    <p className='top-news-date'>{data[0].date}</p>
+                </div>
             </div>
 
             <div className="right-news">
                  <div className="slider-container">
-                    <div className="slide" style={{ backgroundImage: `url(${slides[currentSlide]})` }}> </div>                  
+                    <img className="slide" src={slides[currentSlide]} alt=""/>                
                     <div className="slider-indicators">
                         {slides.map((_, index) => (
                             <span
@@ -75,7 +70,10 @@ const TopNewsBlock: React.FC = () =>{
                                 {index === currentSlide && (
                                     <span
                                         className="indicator-fill"
-                                        style={{ width: `${progress}%` }}
+                                        style={{
+                                            width: index === currentSlide ? `${progress}%` : '0%',
+                                            transition: 'width 5s linear',
+                                          }}
                                     ></span>
                                 )}
                             </span>

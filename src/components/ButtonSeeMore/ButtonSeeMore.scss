@@ -10,8 +10,10 @@
     position: absolute;
     top: 100%;
     
+    // transform: translateY(-58%);
+
     z-index: 0;
-    width: 1830px;
+    max-width: 1830p;
     height: 50px;
 
 
@@ -22,12 +24,11 @@
 
 .button-see-more{
     position: relative;
-    width: 1830px;
     height: 50px;
     
     z-index: 1;
 
-
+    color: #404040;
     background-color: #FFF;
     mask: url('./ButtonMask.svg');    
     mask-size: contain;

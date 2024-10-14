@@ -75,18 +75,21 @@ return (
         <Filter/>
     {newsData.map((news, index) => (
         <div key={news.id} className="news-item">
-        <div className="news-category">
-            <LeftBracket/>
-            <span className={index === 0 ? "first-category" : "other-category"}>
-            {news.category}
-            </span>
-            <RightBracket/>
+        <div className="news-text">
+            <div className="news-category">
+                <LeftBracket/>
+                <span className={index === 0 ? "first-category" : "other-category"}>
+                {news.category}
+                </span>
+                <RightBracket/>
+            </div>
+            <div className="news-content">
+                <h2 className="news-title">{news.title}</h2>
+                <p className="news-description">{news.description}</p>
+                <p className="news-date">{news.date}</p>
+            </div>
         </div>
-        <div className="news-content">
-            <h2 className="news-title">{news.title}</h2>
-            <p className="news-description">{news.description}</p>
-            <p className="news-date">{news.date}</p>
-        </div>
+
         <div className="news-image">
             <img
             src={news.imageUrl}

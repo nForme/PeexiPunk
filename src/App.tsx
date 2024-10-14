@@ -1,8 +1,7 @@
 import './styles/App.css'
-import './styles/Responsive.scss'
 import TopNewsBlock from './components/TopNewsBlock/TopNewsBlock'
-import ButtonSeeMore from './components/ButtonSeeMore/ButtonSeeMore'
-import NewsList from './components/NewsList/NewsList'
+// import ButtonSeeMore from './components/ButtonSeeMore/ButtonSeeMore'
+// import NewsList from './components/NewsList/NewsList'
 // import React from 'react'
 
 
@@ -11,8 +10,8 @@ function App() {
   return (
     <div className='main-container'>
       <TopNewsBlock/>
-      <NewsList/> 
-      <ButtonSeeMore/>
+      {/* <NewsList/> 
+      <ButtonSeeMore/> */}
     </div>
   )
 }

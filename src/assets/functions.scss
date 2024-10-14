@@ -1,0 +1,19 @@
+@function adaptive-margin($min, $max) {
+    
+    $min-width: 1440px;
+    $max-width: 1920px;
+    $min-w: 1440;
+    $max-w: 1920;
+     
+     
+    @return calc(#{$min}px + (#{($max - $min)} * ((100vw - #{$min-width}) / (#{$max-w} - #{$min-w}))));
+}
+
+@function adaptive-height($min-height, $max-height) {
+    $min-width: 1440px;
+    $max-width: 1920px;
+    $min-w: 1440;
+    $max-w: 1920;
+
+    @return calc(#{$min-height}px + (#{($max-height - $min-height)} * ((100vw - #{$min-width}) / (#{$max-w} - #{$min-w}))));
+}
