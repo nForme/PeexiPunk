@@ -25,21 +25,26 @@ const TopNewsBlock: React.FC = () =>{
     const [progress, setProgress] = useState(0);
 
     useEffect(() => {
-        const slideDuration = 5000; // 
-        const interval = setInterval(() => {
-        setProgress((prev) => {
-            if (prev < 100) return prev + 1; 
-            return 0; 
-        });
-        }, slideDuration / 100); 
+        const slideDuration = 5000; // 5 секунд
+        const intervalDuration = slideDuration / 100; // 50ms
 
-        
+        const interval = setInterval(() => {
+            setProgress((prev) => {
+                if (prev < 100) return prev + 1; 
+                return 0; 
+            });
+        }, intervalDuration); 
+
         if (progress === 100) {
-        setCurrentSlide((prev) => (prev + 1) % slides.length);
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
         }
 
         return () => clearInterval(interval); 
     }, [progress, slides.length]);
+
+    useEffect(() => {
+        setProgress(0);
+    }, [currentSlide]);
 
     return (
         <div className="top-news-block">
@@ -62,22 +67,27 @@ const TopNewsBlock: React.FC = () =>{
                  <div className="slider-container">
                     <img className="slide" src={slides[currentSlide]} alt=""/>                
                     <div className="slider-indicators">
-                        {slides.map((_, index) => (
-                            <span
-                                key={index}
-                                className={`indicator ${index === currentSlide ? 'active' : ''}`}
-                            >
-                                {index === currentSlide && (
+                        {slides.map((_, index) => {
+                                let fillWidth = 0;
+                                if (index < currentSlide) {
+                                    fillWidth = 100;
+                                } else if (index === currentSlide) {
+                                    fillWidth = progress;
+                                } else {
+                                    fillWidth = 0;
+                                }
+                                return (
                                     <span
-                                        className="indicator-fill"
-                                        style={{
-                                            width: index === currentSlide ? `${progress}%` : '0%',
-                                            transition: 'width 5s linear',
-                                          }}
-                                    ></span>
-                                )}
-                            </span>
-                        ))}
+                                        key={index}
+                                        className="indicator"
+                                    >
+                                        <span
+                                            className="indicator-fill"
+                                            style={{ width: `${fillWidth}%` }}
+                                        ></span>
+                                    </span>
+                                );
+                            })}
                     </div>
                 </div>
             </div>

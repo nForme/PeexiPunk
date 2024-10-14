@@ -92,7 +92,7 @@
         top:0;
         left: 0;
         background-color: variables.$indicator-color-active;
-        transition: width 5s linear;
+        transition: width 0.05s linear;
     }    
 
     .indicator.active .indicator-fill {
