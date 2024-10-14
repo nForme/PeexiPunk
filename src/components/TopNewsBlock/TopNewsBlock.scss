@@ -100,7 +100,7 @@
     }
 }
 
-@media (min-width:420px){
+@media (min-width:360px){
     .top-news-block{
         max-width: 536px;
         flex-direction: column;
@@ -268,19 +268,19 @@
                 // flex: 1;
                 flex-direction: column;
                 
-                .top-news-content{
-                    .category{
-                        font-size: 20px;
-                    }
 
-                    .top-news-title{
-                        font-size: 38px;
-                    }
-
-                    .top-news-description{
-                        font-size: 20px;
-                    }
+                .category{
+                    font-size: 20px;
                 }
+
+                .top-news-title{
+                    font-size: 38px;
+                }
+
+                .top-news-description{
+                    font-size: 20px;
+                }
+                
 
                 .top-news-date-container{
                     .top-news-date{

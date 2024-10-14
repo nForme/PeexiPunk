@@ -8,7 +8,7 @@
   margin: 0;
 }
 
-@media (min-width:420px) {
+@media (min-width:360px) {
   .main-container{
     margin: 0 10px;
   }
