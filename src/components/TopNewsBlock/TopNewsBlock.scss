@@ -1,20 +1,24 @@
-@use '../../assets/variables.scss';
+@use '../../assets/variables.scss' as variables;
 @use '../../assets/functions.scss' as func;
 
 
 .top-news-block{
     display: flex;
     flex-direction: row;
-    
+    margin-top: 40px;
     justify-content: center;
 
     .left-news{
-        height: auto;
+        
         display: flex;
         box-sizing: border-box;
 
         .category{
             display: flex;
+
+            svg{
+                fill: variables.$first-item-color;
+            }
         }
 
         .top-news-category{
@@ -57,8 +61,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        background-size: cover;
-        background-position: center;
         transition: background-image 0.5s ease-in-out;
     }
     
@@ -174,7 +176,7 @@
         .right-news{
             max-height: 400px;
             order: 1;
-            margin-bottom: 20px;
+            margin-bottom: 0px;
         }
     }
 }
@@ -262,7 +264,8 @@
             .left-news{
                 max-height: 696px;
                 max-width: 614px;
-                height: func.adaptive-height(512,696);
+                padding: 40px 60px;
+                height: func.adaptive-height(512,696,1440px,1920px);
                 width: func.adaptive-margin(460,614);
                 order: 1;
                 // flex: 1;
@@ -298,11 +301,11 @@
             }
     
             .right-news{
-                height: func.adaptive-height(512,696);
-                width: func.adaptive-margin(900,1226);
+                flex: 1;
                 max-width: 1226px;
                 max-height: 696px;
-                // flex: 1;
+                height: func.adaptive-height(512,696,1440px,1920px);
+                width: func.adaptive-width(900,1226,1440px,1920px);
                 order: 2;
                 margin-bottom: 0;
             }

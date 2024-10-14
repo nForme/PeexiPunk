@@ -19,7 +19,7 @@ const TopNewsBlock: React.FC = () =>{
     const slides = [
         Photo,
         Photo,
-        Photo
+        'https://via.placeholder.com/440x250'
     ];
     const [currentSlide, setCurrentSlide] = useState(0);
     const [progress, setProgress] = useState(0);

@@ -76,9 +76,9 @@ return (
     {newsData.map((news, index) => (
         <div key={news.id} className="news-item">
         <div className="news-text">
-            <div className="news-category">
+            <div className={index === 0 ? "first-news-category" : "news-category-container"}>
                 <LeftBracket/>
-                <span className={index === 0 ? "first-category" : "other-category"}>
+                <span className="news-category">
                 {news.category}
                 </span>
                 <RightBracket/>
