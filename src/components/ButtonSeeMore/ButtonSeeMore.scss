@@ -13,7 +13,7 @@
     // transform: translateY(-58%);
 
     z-index: 0;
-    max-width: 1830p;
+    width: 340px;
     height: 50px;
 
 
@@ -24,8 +24,8 @@
 
 .button-see-more{
     position: relative;
+    min-width: 340px;
     height: 50px;
-    
     z-index: 1;
 
     color: #404040;
@@ -42,4 +42,8 @@
     transform:  translateY(10px);
 }
 
+
+@media (min-width:360px) {
+    
+}
 

@@ -1,28 +1,4 @@
 
-@function adaptive-width($min, $max, $min-width: 320px, $max-width: 1920px) {
-    $min-w: $min-width / 1px;
-    $max-w: $max-width / 1px;
-    $slope: ($max - $min) / ($max-w - $min-w);
-    
-    @return clamp(
-      #{$min}px,
-      #{$min}px + #{$slope} * (100vw - #{$min-width}),
-      #{$max}px
-    );
-  }
-  
-  @function adaptive-height($min, $max, $min-width: 320px, $max-width: 1920px) {
-    $min-w: $min-width / 1px;
-    $max-w: $max-width / 1px;
-    $slope: ($max - $min) / ($max-w - $min-w);
-    
-    @return clamp(
-      #{$min}px,
-      #{$min}px + #{$slope} * (100vw - #{$min-width}),
-      #{$max}px
-    );
-}
-
 @function adaptive-margin($min, $max) {
     
     $min-width: 1440px;

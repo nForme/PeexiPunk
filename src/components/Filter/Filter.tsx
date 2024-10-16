@@ -267,7 +267,7 @@ const Filter: React.FC = () => {
   )
 
   return (
-    <div className={`dropdown-block ${isOpen ? 'dropdown-block-open' : ''}`}>
+    <div className='dropdown-block'>
       <div className={`dropdown ${isOpen ? 'active' : ''}`}>
         <ul className="dropdown-menu">
           <li onClick={handleToggle} className="dropdown-toggle">

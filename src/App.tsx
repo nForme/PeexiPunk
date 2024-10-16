@@ -1,8 +1,7 @@
 import './styles/App.css'
 import TopNewsBlock from './components/TopNewsBlock/TopNewsBlock'
-// import ButtonSeeMore from './components/ButtonSeeMore/ButtonSeeMore'
+import ButtonSeeMore from './components/ButtonSeeMore/ButtonSeeMore'
 import NewsList from './components/NewsList/NewsList'
-// import React from 'react'
 
 
 function App() {
@@ -11,7 +10,7 @@ function App() {
     <div className='main-container'>
       <TopNewsBlock/>
       <NewsList/> 
-      {/* <ButtonSeeMore/> */}
+      <ButtonSeeMore/>
     </div>
   )
 }
