@@ -195,6 +195,7 @@
         flex: 1;
         max-height: 250px;
         .news-category-container {
+          max-width: 614px;
           margin-top: 0px;
         }
 
@@ -228,8 +229,8 @@
         flex-basis: 50%;
         max-width: 450px;
         img {
-          max-width: 450px;
-          max-height: 250px;
+          // max-width: 450px;
+          // max-height: 250px;
         }
       }
     }
@@ -281,7 +282,7 @@
 
       .news-image {
         flex: 1 0 30%;
-        // max-width: 440px;
+        max-width: 440px;
         // max-height: 250px;
         img {
           // max-width: 440px;
@@ -298,7 +299,7 @@
       .news-text {
         max-height: 332px;
         .news-category-container {
-          max-width: 614px;
+          // max-width: 614px;
           // width: func.adaptive-margin-1440(460, 614);
           .news-category {
           }
