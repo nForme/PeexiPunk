@@ -12,9 +12,9 @@
 
 @function adaptive-margin-1250($min, $max) {
   $min-width: 1250px;
-  $max-width: 1440px;
+  $max-width: 1920px;
   $min-w: 1250;
-  $max-w: 1440;
+  $max-w: 1920;
 
   @return calc(
     #{$min}px +
