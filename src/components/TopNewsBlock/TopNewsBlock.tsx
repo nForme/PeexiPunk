@@ -44,7 +44,7 @@ const TopNewsBlock: React.FC = () => {
     setProgress(0);
   }, [currentSlide]);
 
-  const handleIndicatorClick = (index: nunmber) => {
+  const handleIndicatorClick = (index: number) => {
     setCurrentSlide(index);
   };
 
