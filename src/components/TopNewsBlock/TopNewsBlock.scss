@@ -288,7 +288,7 @@
       padding-right: 40px;
       max-width: 614px;
       max-height: 696px;
-
+      height: func.adaptive-height(512, 696);
       width: func.adaptive-margin-1250(400, 614);
       order: 1;
       flex-direction: column;
@@ -330,7 +330,7 @@
       flex: 1;
       max-width: 1226px;
       max-height: 696px;
-      // max-height: func.adaptive-height(512,696);
+      height: func.adaptive-height(512, 696);
       order: 2;
       margin-bottom: 0;
     }
