@@ -1,7 +1,7 @@
 @function adaptive-margin($min, $max) {
-  $min-width: 950px;
+  $min-width: 360px;
   $max-width: 1920px;
-  $min-w: 950;
+  $min-w: 360;
   $max-w: 1920;
 
   @return calc(
@@ -35,10 +35,10 @@
 }
 
 @function adaptive-height($min, $max) {
-  $min-height: 400px;
-  $max-height: 696px;
-  $min-h: 400;
-  $max-h: 696;
+  $min-height: 600px;
+  $max-height: 1080px;
+  $min-h: 600;
+  $max-h: 1080;
 
   @return calc(
     #{$min}px +
