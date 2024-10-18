@@ -44,6 +44,10 @@ const TopNewsBlock: React.FC = () => {
     setProgress(0);
   }, [currentSlide]);
 
+  const handleIndicatorClick = (index: nunmber) => {
+    setCurrentSlide(index);
+  };
+
   return (
     <div className="top-news-block">
       <div className="left-news">
@@ -75,7 +79,11 @@ const TopNewsBlock: React.FC = () => {
                 fillWidth = 0;
               }
               return (
-                <span key={index} className="indicator">
+                <span
+                  key={index}
+                  className="indicator"
+                  onClick={() => handleIndicatorClick(index)}
+                >
                   <span
                     className="indicator-fill"
                     style={{ width: `${fillWidth}%` }}

@@ -33,15 +33,3 @@
       (#{($max - $min)} * ((100vw - #{$min-width}) / (#{$max-w} - #{$min-w})))
   );
 }
-
-@function adaptive-height($min, $max) {
-  $min-height: 600px;
-  $max-height: 1080px;
-  $min-h: 600;
-  $max-h: 1080;
-
-  @return calc(
-    #{$min}px +
-      (#{($max - $min)} * ((100vh - #{$min-height}) / (#{$max-h} - #{$min-h})))
-  );
-}
