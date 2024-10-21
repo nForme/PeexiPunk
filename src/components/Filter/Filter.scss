@@ -1,3 +1,5 @@
+@use "../../assets/variables.scss" as variables;
+
 .dropdown-block {
   min-height: 48px;
 }
@@ -6,9 +8,9 @@
   max-width: 230px;
   max-height: 200px;
 
-  background-color: #121212;
+  background-color: variables.$background-color;
   border-radius: 6px;
-  border: 1.4px solid #404040;
+  border: 1.4px solid variables.$border-color;
 
   margin: 0;
   padding: 15px 20px;
@@ -17,8 +19,8 @@
 
   .dropdown-item {
     margin-top: 14px;
-    font-weight: 500;
-    color: #707070;
+    font-weight: 600;
+    color: variables.$text-color-dark;
 
     &.active {
       color: #fefefe;
@@ -26,8 +28,9 @@
   }
 
   .dropdown-toggle {
+    font-weight: 600;
     .filter-label {
-      color: #707070;
+      color: variables.$text-color-dark;
     }
 
     svg {
