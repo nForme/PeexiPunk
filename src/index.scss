@@ -1,0 +1,53 @@
+@use "./assets/variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Fairfax";
+  src: url(./assets/fonts/Fairfax.ttf);
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url(./assets/fonts/Rubik-Regular.woff2) format(woff2);
+}
+
+:root {
+  font-family: variables.$font-primary, variables.$font-title;
+  line-height: 100%;
+  font-weight: 400;
+  font-size: variables.$font-size-basic;
+  color-scheme: light dark;
+  color: variables.$primary-text-color;
+  background-color: variables.$background-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+  padding-inline: 0;
+  padding-block: 0;
+}
