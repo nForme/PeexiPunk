@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "./PeexiPunk",
+  base: "/PeexiPunk",
   plugins: [react()],
 
   css: {
