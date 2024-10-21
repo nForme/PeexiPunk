@@ -1,20 +1,32 @@
-//colors
-$primary-text-color: #fefefe;
-$text-color-dark: #707070;
-$first-item-color: #34d3d7;
-$indicator-color-active: #34d3d7;
-$brackets-color-active: #34d3d7;
-$brackets-color-default: #6f6f6f;
-$text-category-default: #6f6f6f;
-$indicator-color-default: #707070;
-$border-color: #404040;
+//Common
 $background-color: #121212;
 
-//fonts
 $font-primary: "Rubik";
 $font-title: "Fairfax";
+$font-category: "RubikMedium";
+
 $font-size-basic: 16px;
 
-//borders
 $border-radius-top-news-block: 10px;
 $border-radius-image-news-list: 8px;
+
+//Colors
+$brackets-active-color: #34d3d7;
+$brackets-default-color: #6f6f6f;
+
+$text-category-active-color: #34d3d7;
+$text-category-default-color: #6f6f6f;
+
+$text-dark-color: #707070;
+$text-primary-color: #fefefe;
+
+$border-color: #404040;
+
+//TopNewsBlock
+$indicator-default-color: #707070;
+$indicator-active-color: #34d3d7;
+
+//NewsList
+$border-active-color: #34d3d7;
+
+$font-filter-menu: "RubikMedium";

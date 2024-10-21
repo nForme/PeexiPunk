@@ -18,13 +18,18 @@
   src: url(./assets/fonts/Rubik-Regular.woff2) format(woff2);
 }
 
+@font-face {
+  font-family: "RubikMedium";
+  src: url("./assets/fonts/Rubik-Medium.ttf");
+}
 :root {
-  font-family: variables.$font-primary, variables.$font-title;
+  font-family: variables.$font-primary, variables.$font-title,
+    variables.$font-category;
   line-height: 100%;
   font-weight: 400;
   font-size: variables.$font-size-basic;
   color-scheme: light dark;
-  color: variables.$primary-text-color;
+  color: variables.$text-primary-color;
   background-color: variables.$background-color;
 }
 

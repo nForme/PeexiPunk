@@ -19,8 +19,8 @@
 
   .dropdown-item {
     margin-top: 14px;
-    font-weight: 600;
-    color: variables.$text-color-dark;
+    font-family: variables.$font-filter-menu;
+    color: variables.$text-dark-color;
 
     &.active {
       color: #fefefe;
@@ -28,9 +28,9 @@
   }
 
   .dropdown-toggle {
-    font-weight: 600;
+    font-family: variables.$font-filter-menu;
     .filter-label {
-      color: variables.$text-color-dark;
+      color: variables.$text-dark-color;
     }
 
     svg {
