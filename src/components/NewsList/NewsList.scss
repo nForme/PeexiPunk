@@ -325,11 +325,13 @@
 
 @media (min-width: 1920px) {
   .news-list {
+    max-width: 2480px;
     .news-item {
       padding-bottom: 40px;
       margin-bottom: 40px;
       .news-text {
         .news-category-container {
+          max-width: 744px;
           .news-category {
             font-size: 20px;
             line-height: 120%;
@@ -340,16 +342,19 @@
           .news-title {
             font-size: 38px;
             line-height: 100%;
+            max-width: 98%;
           }
 
           .news-description {
             font-size: 20px;
             line-height: 110%;
+            max-width: 98%;
           }
 
           .news-date {
             font-size: 20px;
             line-height: 110%;
+            max-width: 100%;
           }
         }
       }

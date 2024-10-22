@@ -336,11 +336,14 @@
 @media (min-width: 1920px) {
   .top-news-block {
     max-width: 2480px;
+    max-height: 1000px;
     .left-news {
       padding: 40px 60px;
     }
 
     .left-news {
+      max-width: 744px;
+      max-height: 1000px;
       .category {
         margin-bottom: 14px;
         font-size: 20px;
@@ -371,6 +374,8 @@
     }
 
     .right-news {
+      max-width: 1736px;
+      max-height: 1000px;
       .slider-container {
         .slider-indicators {
           gap: 6px;
