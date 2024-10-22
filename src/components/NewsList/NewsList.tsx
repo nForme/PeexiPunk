@@ -81,7 +81,7 @@ const NewsList: React.FC = () => {
   return (
     <div className="news-list">
       <Filter onFilterChange={handleFilterChange} />
-      {filteredNews.map((news, index) => (
+      {filteredNews.map((news) => (
         <div key={news.id} className="news-item">
           <div className="news-text">
             <div className="news-category-container">
@@ -97,11 +97,9 @@ const NewsList: React.FC = () => {
           </div>
 
           <div className="news-image">
-            <img
-              src={news.imageUrl}
-              alt={news.title}
-              className={index === 0 ? "first-image" : ""}
-            />
+            <div className="news-image-container">
+              <img src={news.imageUrl} alt={news.title} />
+            </div>
           </div>
         </div>
       ))}
