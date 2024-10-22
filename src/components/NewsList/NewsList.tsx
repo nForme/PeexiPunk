@@ -7,6 +7,7 @@ import LeftBracket from "../Brackets/LeftBracket";
 import RightBracket from "../Brackets/RightBracket";
 
 const newsData = [
+  // Категория "News"
   {
     id: 1,
     category: "News",
@@ -16,40 +17,38 @@ const newsData = [
     date: "14 April 2024",
     imageUrl: Photo,
   },
-
   {
     id: 2,
-    category: "Game",
+    category: "News",
     title: "IMMERSIVE EXPERIENCE DESIGN: EXPERT INSIGHTS AND TECHNIQUES",
     description:
       "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
-    date: "14 April 2024",
+    date: "15 April 2024",
     imageUrl: Photo,
   },
-
   {
     id: 3,
     category: "News",
     title: "IMMERSIVE EXPERIENCE DESIGN: EXPERT INSIGHTS AND TECHNIQUES",
     description:
       "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
-    date: "14 April 2024",
+    date: "16 April 2024",
     imageUrl: Photo,
   },
-
   {
     id: 4,
-    category: "Game",
+    category: "News",
     title: "IMMERSIVE EXPERIENCE DESIGN: EXPERT INSIGHTS AND TECHNIQUES",
     description:
       "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
-    date: "14 April 2024",
+    date: "17 April 2024",
     imageUrl: Photo,
   },
 
+  // Категория "Game"
   {
     id: 5,
-    category: "News",
+    category: "Game",
     title: "IMMERSIVE EXPERIENCE DESIGN: EXPERT INSIGHTS AND TECHNIQUES",
     description:
       "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
@@ -62,26 +61,129 @@ const newsData = [
     title: "IMMERSIVE EXPERIENCE DESIGN: EXPERT INSIGHTS AND TECHNIQUES",
     description:
       "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
-    date: "14 April 2024",
+    date: "15 April 2024",
+    imageUrl: Photo,
+  },
+  {
+    id: 7,
+    category: "Game",
+    title: "IMMERSIVE EXPERIENCE DESIGN: EXPERT INSIGHTS AND TECHNIQUES",
+    description:
+      "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
+    date: "16 April 2024",
+    imageUrl: Photo,
+  },
+  {
+    id: 8,
+    category: "Game",
+    title: "IMMERSIVE EXPERIENCE DESIGN: EXPERT INSIGHTS AND TECHNIQUES",
+    description:
+      "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
+    date: "17 April 2024",
+    imageUrl: Photo,
+  },
+
+  // Категория "Announce"
+  {
+    id: 9,
+    category: "Announce",
+    title: "IMMERSIVE EXPERIENCE DESIGN: EXPERT INSIGHTS AND TECHNIQUES",
+    description:
+      "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
+    date: "18 April 2024",
+    imageUrl: Photo,
+  },
+  {
+    id: 10,
+    category: "Announce",
+    title: "IMMERSIVE EXPERIENCE DESIGN: EXPERT INSIGHTS AND TECHNIQUES",
+    description:
+      "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
+    date: "19 April 2024",
+    imageUrl: Photo,
+  },
+  {
+    id: 11,
+    category: "Announce",
+    title: "IMMERSIVE EXPERIENCE DESIGN: EXPERT INSIGHTS AND TECHNIQUES",
+    description:
+      "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
+    date: "20 April 2024",
+    imageUrl: Photo,
+  },
+  {
+    id: 12,
+    category: "Announce",
+    title: "IMMERSIVE EXPERIENCE DESIGN: EXPERT INSIGHTS AND TECHNIQUES",
+    description:
+      "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
+    date: "21 April 2024",
+    imageUrl: Photo,
+  },
+
+  // Категория "Update"
+  {
+    id: 13,
+    category: "Update",
+    title: "IMMERSIVE EXPERIENCE DESIGN: EXPERT INSIGHTS AND TECHNIQUES",
+    description:
+      "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
+    date: "18 April 2024",
+    imageUrl: Photo,
+  },
+  {
+    id: 14,
+    category: "Update",
+    title: "IMMERSIVE EXPERIENCE DESIGN: EXPERT INSIGHTS AND TECHNIQUES",
+    description:
+      "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
+    date: "19 April 2024",
+    imageUrl: Photo,
+  },
+  {
+    id: 15,
+    category: "Update",
+    title: "IMMERSIVE EXPERIENCE DESIGN: EXPERT INSIGHTS AND TECHNIQUES",
+    description:
+      "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
+    date: "20 April 2024",
+    imageUrl: Photo,
+  },
+  {
+    id: 16,
+    category: "Update",
+    title: "IMMERSIVE EXPERIENCE DESIGN: EXPERT INSIGHTS AND TECHNIQUES",
+    description:
+      "How can designers draw people into your product's virtual, digital, or physical world? Take UX to a new level with these expert perspectives on immersive experience design.",
+    date: "21 April 2024",
     imageUrl: Photo,
   },
 ];
 
 const NewsList: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [visibleNewsCount, setVisibleNewsCount] = useState<number>(2);
 
   const handleFilterChange = (category: string) => {
     setSelectedCategory(category);
+    setVisibleNewsCount(2);
+  };
+
+  const loadMoreNews = () => {
+    setVisibleNewsCount((prevCount) => prevCount + 2);
   };
 
   const filteredNews =
     selectedCategory === "All"
       ? newsData
       : newsData.filter((news) => news.category === selectedCategory);
+
+  const visibleNews = filteredNews.slice(0, visibleNewsCount);
+
   return (
     <div className="news-list">
       <Filter onFilterChange={handleFilterChange} />
-      {filteredNews.map((news) => (
+      {visibleNews.map((news) => (
         <div key={news.id} className="news-item">
           <div className="news-text">
             <div className="news-category-container">
@@ -103,6 +205,9 @@ const NewsList: React.FC = () => {
           </div>
         </div>
       ))}
+      <button onClick={loadMoreNews} className="see-more-button">
+        See more
+      </button>
     </div>
   );
 };

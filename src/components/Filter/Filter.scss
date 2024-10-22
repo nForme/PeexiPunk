@@ -5,7 +5,7 @@
 }
 
 .dropdown-menu {
-  max-width: 230px;
+  max-width: 240px;
   max-height: 200px;
 
   background-color: variables.$background-color;
@@ -30,13 +30,14 @@
   .dropdown-toggle {
     font-family: variables.$font-filter-menu;
     .filter-label {
+      margin-right: 4px;
       color: variables.$text-dark-color;
     }
 
     svg {
-      width: 16px;
+      width: 18px;
       height: 10px;
-      margin-left: 10px;
+      margin-left: 6px;
       fill: #fefefe;
     }
   }
