@@ -29,7 +29,7 @@ const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
       viewBox="0 0 50 30"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      transform="scale(1,-1)"
+      transform="rotate(180)"
     >
       <path
         fillRule="evenodd"

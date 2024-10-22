@@ -80,15 +80,13 @@
         background-color: variables.$indicator-default-color;
       }
 
-      .indicator.active {
-      }
-
       .indicator-fill {
         width: 0;
         top: 0;
         left: 0;
         background-color: variables.$indicator-active-color;
         transition: width 0.05s linear;
+        border-radius: 8px;
       }
 
       .indicator.active .indicator-fill {
@@ -135,6 +133,12 @@
       flex: 1;
       order: 1;
       margin-bottom: 20px;
+
+      .slider-container {
+        .slider-indicators {
+          gap: 4px;
+        }
+      }
     }
   }
 }
@@ -331,6 +335,7 @@
 
 @media (min-width: 1920px) {
   .top-news-block {
+    max-width: 2480px;
     .left-news {
       padding: 40px 60px;
     }

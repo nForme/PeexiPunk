@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "Fairfax";
-  src: url(./assets/fonts/Fairfax.ttf);
+  src: url(./assets/fonts/Fairfax.woff2) format(woff2);
 }
 
 @font-face {
@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: "RubikMedium";
-  src: url("./assets/fonts/Rubik-Medium.ttf");
+  src: url("./assets/fonts/Rubik-Medium.woff2") format(woff2);
 }
 :root {
   font-family: variables.$font-primary, variables.$font-title,
