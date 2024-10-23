@@ -8,8 +8,9 @@
   }
   .news-item {
     display: flex;
+    border-bottom: 1px solid variables.$border-color;
 
-    &:last-child {
+    &:last-of-type {
       border-bottom: none;
     }
 
@@ -48,7 +49,6 @@
       }
     }
 
-    border-bottom: 1px solid variables.$border-color;
     .news-text {
       .news-category-container {
         display: flex;

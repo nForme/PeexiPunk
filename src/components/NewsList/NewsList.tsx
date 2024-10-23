@@ -162,15 +162,15 @@ const newsData = [
 
 const NewsList: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
-  const [visibleNewsCount, setVisibleNewsCount] = useState<number>(2);
+  const [visibleNewsCount, setVisibleNewsCount] = useState<number>(6);
 
   const handleFilterChange = (category: string) => {
     setSelectedCategory(category);
-    setVisibleNewsCount(2);
+    setVisibleNewsCount(6);
   };
 
   const loadMoreNews = () => {
-    setVisibleNewsCount((prevCount) => prevCount + 2);
+    setVisibleNewsCount(filteredNews.length);
   };
 
   const filteredNews =

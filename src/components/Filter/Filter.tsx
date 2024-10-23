@@ -23,13 +23,12 @@ const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
 
   const ArrowUp = (
     <svg
-      className="section05RowImage"
+      className="ArrowUp"
       width="50"
       height="30"
       viewBox="0 0 50 30"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      transform="rotate(180)"
     >
       <path
         fillRule="evenodd"
@@ -42,7 +41,7 @@ const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
 
   const ArrowDown = (
     <svg
-      className="section05RowImage"
+      className="ArrowDown"
       width="50"
       height="30"
       viewBox="0 0 50 30"
